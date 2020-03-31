@@ -1,69 +1,69 @@
 spring:
-    profiles:
-        active:
-        - dev
+  profiles:
+    active:
+    - dev
 ---
 server:
-    port: 8001
+  port: 8001
 spring:
-    profiles: dev
-    application:
-        name:microservicecloud-config-dept-client
-    datasource:
-        url: jdbc:mysql://localhost:3306/cloudDB01?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false
-        username: root
-        password: 6378617
-        driver-class-name: org.gjt.mm.mysql.Driver
-        type: com.alibaba.druid.pool.DruidDataSource
-        dbcp2:
-            min-idle: 5                   # 数据库连接池最小维持连接 
-            initial-size: 5               # 初始化连接数
-            max-total: 5                  # 最大连接数
-            max-wait-millis: 200          # 等待连接获取最大时间
+  profiles: dev
+  application:
+    name:microservicecloud-config-dept-client
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloudDB01?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false
+    username: root
+    password: 6378617
+    driver-class-name: org.gjt.mm.mysql.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    dbcp2:
+      min-idle: 5                   # 数据库连接池最小维持连接 
+      initial-size: 5               # 初始化连接数
+      max-total: 5                  # 最大连接数
+      max-wait-millis: 200          # 等待连接获取最大时间
 
 #Mybatis配置
 mybatis:
-    config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
-    type-aliases-package: com.atguigu.springcloud.entity    # 所有entity别名类所在包
-    mapper-locations:
-    - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
+  config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
+  type-aliases-package: com.atguigu.springcloud.entity    # 所有entity别名类所在包
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
 
 eureka:
-    client:
-        service-url:
-            defaultZone: http://eureka7001.com:7001/eureka
-    instance:
-        instance-id: dept-8001.com
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: dept-8001.com
 
 ---
 server:
-    port: 8001
+  port: 8001
 spring:
-    profiles: test
-    application:
-        name:microservicecloud-config-dept-client
-    datasource:
-        url: jdbc:mysql://localhost:3306/cloudDB02?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false
-        username: root
-        password: 6378617
-        driver-class-name: org.gjt.mm.mysql.Driver
-        type: com.alibaba.druid.pool.DruidDataSource
-        dbcp2:
-            min-idle: 5                   # 数据库连接池最小维持连接 
-            initial-size: 5               # 初始化连接数
-            max-total: 5                  # 最大连接数
-            max-wait-millis: 200          # 等待连接获取最大时间
+  profiles: test
+  application:
+    name:microservicecloud-config-dept-client
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloudDB02?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false
+    username: root
+    password: 6378617
+    driver-class-name: org.gjt.mm.mysql.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    dbcp2:
+      min-idle: 5                   # 数据库连接池最小维持连接 
+      initial-size: 5               # 初始化连接数
+      max-total: 5                  # 最大连接数
+      max-wait-millis: 200          # 等待连接获取最大时间
 
 #Mybatis配置
 mybatis:
-    config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
-    type-aliases-package: com.atguigu.springcloud.entity    # 所有entity别名类所在包
-    mapper-locations:
-    - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
+  config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
+  type-aliases-package: com.atguigu.springcloud.entity    # 所有entity别名类所在包
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
 
 eureka:
-    client:
-        service-url:
-            defaultZone: http://eureka7001.com:7001/eureka
-    instance:
-        instance-id: dept-8001.com
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: dept-8001.com
