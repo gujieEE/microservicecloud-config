@@ -8,7 +8,7 @@ server:
 spring:
   profiles: dev
   application:
-    name:microservicecloud-config-dept-client
+    name: microservicecloud-config-dept-client
   datasource:
     url: jdbc:mysql://localhost:3306/cloudDB01?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false
     username: root
@@ -41,7 +41,7 @@ server:
 spring:
   profiles: test
   application:
-    name:microservicecloud-config-dept-client
+    name: microservicecloud-config-dept-client
   datasource:
     url: jdbc:mysql://localhost:3306/cloudDB02?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&verifyServerCertificate=false&useSSL=false
     username: root
